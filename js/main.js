@@ -1,6 +1,7 @@
 (() => {
   //variables
   const hotspots = document.querySelectorAll(".Hotspot");
+  const materialDiv = document.querySelector("#material-div");
   const materialTemplate = document.querySelector("#material-template");
   const materialList = document.querySelector("#material-list");
 
@@ -31,7 +32,15 @@
           selected.appendChild(textElement);
         });
       })
-      .catch();
+      .catch((error) => {
+        console.log(error);
+        const errorMessage = document.createElement("p");
+        errorMessage.textContent =
+          "Oops! Something went wrong. We couldn't process your request right now due to " +
+          error +
+          " or maybe a typo or syntax error.";
+        hotspots.appendChild(errorMessage);
+      });
   }
   loadInfoBoxes();
 
@@ -60,7 +69,15 @@
         loader.classList.toggle("hidden");
         materialTemplate.innerHTML = "";
       })
-      .catch();
+      .catch((error) => {
+        console.log(error);
+        const errorMessage = document.createElement("p");
+        errorMessage.textContent =
+          "Oops! Something went wrong. We couldn't process your request right now due to " +
+          error +
+          " or maybe a typo or syntax error.";
+        materialDiv.appendChild(errorMessage);
+      });
   }
   loadMaterialInfo();
 
