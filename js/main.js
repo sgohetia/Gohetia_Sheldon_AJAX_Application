@@ -5,7 +5,7 @@
   const materialTemplate = document.querySelector("#material-template");
   const materialList = document.querySelector("#material-list");
 
-  //This information needs to be removed then pulled with an AJAX Call using the Fetch API
+  //AJAX Call using the Fetch API
   //this is the api url https://swiftpixel.com/earbud/api/infoboxes"
 
   //functions
@@ -44,7 +44,7 @@
   }
   loadInfoBoxes();
 
-  //This information needs to be removed then pulled with an AJAX Call using the Fetch API
+  //AJAX Call using the Fetch API
   //this is the api url https://swiftpixel.com/earbud/api/materials"
 
   function loadMaterialInfo() {
